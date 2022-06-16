@@ -87,7 +87,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'wakatime/vim-wakatime'
 Plug 'lilydjwg/colorizer'
 Plug 'townk/vim-autoclose'
-Plug 'nikolvs/vim-sunbather'
+Plug 'ewilazarus/preto'
+Plug 'itchyny/lightline.vim'
 
 " lsp plugins
 Plug 'prabirshrestha/vim-lsp'
@@ -97,12 +98,17 @@ call plug#end()
 
 let g:indentguides_toggleListMode = 0
 
-colorscheme sunbather
+colorscheme preto
 
 set background=dark
 
 hi Normal ctermfg=white guifg=white
 hi Normal ctermbg=black guibg=black
+
+highlight LineNr ctermfg=grey
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+highlight clear SignColumn
 
 hi StatusLine ctermfg=white guifg=white
 hi StatusLine ctermbg=black guibg=black
@@ -142,10 +148,10 @@ set statusline+=\
 if executable('pyls')
     " pip install python-language-server
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'pyls',
-        \ 'cmd': {server_info->['pyls']},
-        \ 'allowlist': ['python'],
-        \ })
+      \ 'name': 'pyls',
+      \ 'cmd': {server_info->['pyls']},
+      \ 'allowlist': ['python'],
+      \ })
 endif
 
 function! s:on_lsp_buffer_enabled() abort
