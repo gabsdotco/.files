@@ -47,6 +47,16 @@ nvm --version
 node -v
 npm -v
 
+# Installing ZSH
+echo "Installing ZSH"
+
+sudo apt install zsh
+
+# Installing Oh My ZSH
+echo "Installing Oh My ZSH"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # Installing Docker
 echo "Installing Docker"
 
@@ -56,6 +66,7 @@ docker --version
 sudo usermod -aG docker $USER
 
 # Installing Docker Compose
+echo "Installing Docker Compose"
 
 sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
@@ -70,6 +81,7 @@ echo "
 
 # Clone the Neovim repository to .config/nvim
 echo "Cloning the custom Neovim configuration"
+
 git clone https://github.com/gabsdotco/init.lua.git ~/.config/nvim
 
 # Copy .tmux.conf to $HOME
