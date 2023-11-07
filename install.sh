@@ -128,3 +128,15 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsM
 unzip JetBrainsMono.zip -d ~/.local/share/fonts
 rm JetBrainsMono.zip
 fc-cache -fv
+
+echo "
+#########################
+# Installing Other Deps #
+#########################
+"
+
+echo "Installing Ripgrep"
+sudo apt-get install ripgrep
+
+echo "Installing FD"
+sudo apt install fd-find
