@@ -40,10 +40,8 @@ echo "Installing NVM"
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-nvm install lts
-nvm use lts
+nvm install --lts
 
-nvm --version
 node -v
 npm -v
 
@@ -93,3 +91,40 @@ cp .tmux.conf $HOME
 echo "Copying .zshrc to $HOME"
 
 cp .zshrc $HOME
+
+echo "
+#######################
+# ZSH Plugins Install #
+#######################
+"
+
+echo "Installing ZSH Autosuggestions"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
+echo "Installing ZSH Syntax Highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+echo "Installing ZSH Z"
+git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+
+echo "Installing ZSH FZF"
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+echo "Installing ZSH Vercel Theme"
+curl https://raw.githubusercontent.com/vercel/zsh-theme/master/vercel.zsh-theme -Lo ~/.oh-my-zsh/custom/themes/vercel.zsh-theme
+
+source ~/.zshrc
+
+echo "
+######################
+# Fonts Install      #
+######################
+"
+
+echo "Installing JetBrains Mono Nerd Font"
+mkdir -p ~/.local/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d ~/.local/share/fonts
+rm JetBrainsMono.zip
+fc-cache -fv
