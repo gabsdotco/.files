@@ -8,6 +8,7 @@ export ZSH="/home/gabs/.oh-my-zsh"
 ZSH_THEME="typewritten/typewritten"
 
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:yellow;secondary:yellow"
+export TYPEWRITTEN_CURSOR="block"
 
 plugins=(
   fzf
@@ -81,7 +82,3 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fpath=($fpath "/home/gabs/.zfunctions")
-
-# Set typewritten ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt typewritten
