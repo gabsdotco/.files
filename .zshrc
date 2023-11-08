@@ -7,6 +7,8 @@ export ZSH="/home/gabs/.oh-my-zsh"
 
 ZSH_THEME="typewritten/typewritten"
 
+export TYPEWRITTEN_COLOR_MAPPINGS="primary:yellow;secondary:yellow"
+
 plugins=(
   fzf
   git
