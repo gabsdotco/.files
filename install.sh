@@ -111,8 +111,8 @@ echo "Installing ZSH FZF"
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
-echo "Installing ZSH Vercel Theme"
-curl https://raw.githubusercontent.com/vercel/zsh-theme/master/vercel.zsh-theme -Lo ~/.oh-my-zsh/custom/themes/vercel.zsh-theme
+echo "Installing ZSH Typewritten Theme"
+git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
 
 source ~/.zshrc
 
