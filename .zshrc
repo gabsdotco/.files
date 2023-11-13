@@ -82,3 +82,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fpath=($fpath "/home/gabs/.zfunctions")
+
+# pnpm
+export PNPM_HOME="/home/gabs/.local/share/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
