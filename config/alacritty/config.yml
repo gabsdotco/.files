@@ -23,16 +23,16 @@ window:
 
   startup_mode: Fullscreen
 
+cursor:
+  style:
+    blinking: Never
+
 scrolling:
   # Specifying '0' will disable scrolling.
   history: 100000
   # Number of lines the viewport will move for every line scrolled when
   # scrollback is enabled (history > 0).
   multiplier: 3
-
-draw_bold_text_with_bright_colors: true
-
-custom_cursor_colors: true
 
 selection:
   # This string contains all characters that are used as separators for
