@@ -1,16 +1,7 @@
 env:
-  # TERM env customization.
-  #
-  # If this property is not set, alacritty will set it to xterm-256color.
-  #
-  # Note that some xterm terminfo databases don't declare support for italics.
-  # You can verify this by checking for the presence of `smso` and `sitm` in
-  # `infocmp xterm-256color`.
   TERM: xterm-256color
 
 window:
-  # Blank space added around the window in pixels. This padding is scaled
-  # by DPI and the specified value is always added at both opposing sides.
   padding:
     x: 32
     y: 32
@@ -21,24 +12,18 @@ window:
 
   decorations: none
 
-  startup_mode: Fullscreen
+  startup_mode: Windowed
 
 cursor:
   style:
     blinking: Never
 
 scrolling:
-  # Specifying '0' will disable scrolling.
   history: 100000
-  # Number of lines the viewport will move for every line scrolled when
-  # scrollback is enabled (history > 0).
   multiplier: 3
 
 selection:
-  # This string contains all characters that are used as separators for
-  # "semantic words" in Alacritty.
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
-  # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
 
 key_bindings:
