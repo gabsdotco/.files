@@ -7,8 +7,8 @@ window:
     y: 36
 
   dimensions:
-    columns: 200
-    lines: 50
+    columns: 180
+    lines: 45
 
   decorations: none
 
