@@ -1,7 +1,7 @@
 schemes:
   macaroni: &macaroni
     primary:
-      background: '0x101010'
+      background: '0x000000'
       foreground: '0xf8f8f6'
     normal:
       black:   '0x242424'
