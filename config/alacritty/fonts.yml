@@ -12,3 +12,6 @@ font:
     family: JetBrainsMono Nerd Font
     style: Bold Italic
   size: 9.0
+  offset:
+    x: 0
+    y: 1
