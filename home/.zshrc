@@ -86,4 +86,19 @@ fpath=($fpath "/home/gabs/.zfunctions")
 # pnpm
 export PNPM_HOME="/home/gabs/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-# pnpm end
+
+# asdf
+. "$HOME/.asdf/asdf.sh"
+
+# append completions to fpath
+fpath=(${ASDF_DIR}/completions $fpath)
+
+# initialise completions with ZSH's compinit
+autoload -Uz compinit && compinit
+
+export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"
+
+export PATH="${HOME}/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
