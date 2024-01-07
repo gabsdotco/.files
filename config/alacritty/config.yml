@@ -3,8 +3,8 @@ env:
 
 window:
   padding:
-    x: 36
-    y: 36
+    x: 24
+    y: 24
 
   dimensions:
     columns: 180

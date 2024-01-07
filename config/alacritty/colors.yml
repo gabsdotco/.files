@@ -22,6 +22,10 @@ schemes:
       cyan:    '0x8affff'
       white:   '0xffffff'
 
+    cursor:
+      text: '0x000000'
+      cursor: '0xffffff'
+
   snowy: &snowy
     primary:
       background: '#f6f6f6'
