@@ -102,3 +102,9 @@ export PATH="${HOME}/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# add cargo to PATH
+export PATH=$PATH:~/.cargo/bin/
+
+# add bob to PATH
+export PATH=$PATH:$HOME/.local/share/bob/nvim-bin

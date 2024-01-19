@@ -17,11 +17,11 @@ echo "Installing Neovim"
 mkdir temp
 cd ./temp
 
-wget https://github.com/neovim/neovim/releases/download/v0.8.3/nvim-linux64.tar.gz
+wget https://github.com/neovim/neovim/releases/download/v0.9.5/nvim-linux64.tar.gz
 tar xvf nvim-linux64.tar.gz
 
-sudo mv nvim-linux64/ /usr/local/neovim-0.8.3
-sudo ln -s /usr/local/neovim-0.8.3/bin/nvim /usr/local/bin/nvim
+sudo mv nvim-linux64/ /usr/local/neovim-0.9.5
+sudo ln -s /usr/local/neovim-0.9.5/bin/nvim /usr/local/bin/nvim
 
 nvim --version
 
