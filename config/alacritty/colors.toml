@@ -20,7 +20,7 @@ green = "0xa0e6af"
 magenta = "0xfd56f9"
 red = "0xff8989"
 white = "0xfefefe"
-yellow = "0xfefa67"
+yellow = "0xf0c674"
 
 [colors.primary]
 background = "0x101010"

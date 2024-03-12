@@ -1,3 +1,5 @@
+live_config_reload = true
+
 [cursor.style]
 blinking = "Never"
 
