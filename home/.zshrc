@@ -108,3 +108,6 @@ export PATH=$PATH:~/.cargo/bin/
 
 # add bob to PATH
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+
+# Turso
+export PATH="/home/gabs/.turso:$PATH"
