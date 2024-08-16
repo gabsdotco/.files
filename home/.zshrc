@@ -107,7 +107,7 @@ eval "$(pyenv virtualenv-init -)"
 export PATH=$PATH:~/.cargo/bin/
 
 # add bob to PATH
-export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
+export PATH=$HOME/.local/share/bob/nvim-bin:$PATH
 
 # Turso
 export PATH="/home/gabs/.turso:$PATH"
