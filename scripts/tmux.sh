@@ -1,7 +1,7 @@
 echo "
-######################
-# TMUX Installation  #
-######################
+#####################
+# TMUX Installation #
+#####################
 "
 
 # Installing Tmux
