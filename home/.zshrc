@@ -7,6 +7,7 @@ export ZSH="/home/gabs/.oh-my-zsh"
 
 ZSH_THEME="typewritten/typewritten"
 
+export TYPEWRITTEN_SYMBOL="λ"
 export TYPEWRITTEN_COLOR_MAPPINGS="primary:white;secondary:white"
 export TYPEWRITTEN_CURSOR="block"
 
