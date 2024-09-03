@@ -99,18 +99,11 @@ fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
-export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"
-
-export PATH="${HOME}/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # add cargo to PATH
-export PATH=$PATH:~/.cargo/bin/
+export PATH="/home/gabs/.cargo/bin:$PATH"
 
 # add bob to PATH
-export PATH=$HOME/.local/share/bob/nvim-bin:$PATH
+export PATH="/home/gabs/.local/share/bob/nvim-bin:$PATH"
 
 # Turso
 export PATH="/home/gabs/.turso:$PATH"
