@@ -19,7 +19,7 @@ decorations = "None"
 startup_mode = "Windowed"
 
 [window.dimensions]
-columns = 135
+columns = 145
 lines = 40
 
 [window.padding]
