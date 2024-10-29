@@ -1,0 +1,138 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "copy",
+        "singleLine": false
+      },
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "command": "paste",
+      "id": "User.paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "command": "find",
+      "id": "User.find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    },
+    {
+      "command": "toggleFocusMode",
+      "id": "User.toggleFocusMode",
+      "keys": "ctrl+shift+o"
+    }
+  ],
+  "alwaysOnTop": false,
+  "centerOnLaunch": true,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+  "initialCols": 145,
+  "initialRows": 40,
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "antialiasingMode": "cleartype",
+      "colorScheme": "Macaroni Custom",
+      "cursorShape": "filledBox",
+      "font": {
+        "face": "JetBrainsMono Nerd Font",
+        "size": 9
+      },
+      "icon": "none",
+      "padding": "16",
+      "scrollbarState": "hidden",
+      "suppressApplicationTitle": true
+    },
+    "list": [
+      {
+        "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "hidden": false,
+        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Powershell Icon.png",
+        "name": "Powershell"
+      },
+      {
+        "commandline": "%SystemRoot%\\System32\\cmd.exe",
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "hidden": false,
+        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Terminal Icon.png",
+        "name": "Terminal"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": true,
+        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Ubuntu Icon.png",
+        "name": "Linux",
+        "source": "Windows.Terminal.Wsl"
+      }
+    ]
+  },
+  "rendering.disablePartialInvalidation": true,
+  "rendering.software": true,
+  "schemes": [
+    {
+      "background": "#161616",
+      "black": "#242424",
+      "blue": "#A978F6",
+      "brightBlack": "#323232",
+      "brightBlue": "#ADDEF8",
+      "brightCyan": "#8AFFFF",
+      "brightGreen": "#A0E6AF",
+      "brightPurple": "#FE78FF",
+      "brightRed": "#FF9898",
+      "brightWhite": "#FFFFFF",
+      "brightYellow": "#FEFF57",
+      "cursorColor": "#FFFFFF",
+      "cyan": "#8AFEFF",
+      "foreground": "#F8F8F6",
+      "green": "#A0E6AF",
+      "name": "Macaroni Custom",
+      "purple": "#FD56F9",
+      "red": "#FF8989",
+      "selectionBackground": "#FFFFFF",
+      "white": "#FEFEFE",
+      "yellow": "#F0C674"
+    }
+  ],
+  "showTabsInTitlebar": true,
+  "showTerminalTitleInTitlebar": false,
+  "tabWidthMode": "equal",
+  "theme": "Macaroni Custom",
+  "themes": [
+    {
+      "name": "Macaroni Custom",
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false
+      },
+      "tabRow": {
+        "background": "#161616",
+        "unfocusedBackground": "#161616"
+      },
+      "tab": {
+        "iconStyle": "default",
+        "background": "#161616",
+        "unfocusedBackground": "#161616"
+      }
+    }
+  ],
+  "useAcrylicInTabRow": false
+}
