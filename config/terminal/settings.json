@@ -1,24 +1,21 @@
 {
   "$help": "https://aka.ms/terminal-documentation",
-  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "$schema": "https://aka.ms/terminal-profiles-schema-preview",
   "actions": [
     {
       "command": {
         "action": "copy",
         "singleLine": false
       },
-      "id": "User.copy.644BA8F2",
-      "keys": "ctrl+c"
+      "id": "User.copy.644BA8F2"
     },
     {
       "command": "paste",
-      "id": "User.paste",
-      "keys": "ctrl+v"
+      "id": "User.paste"
     },
     {
-      "command": "find",
-      "id": "User.find",
-      "keys": "ctrl+shift+f"
+      "command": "toggleFocusMode",
+      "id": "User.toggleFocusMode"
     },
     {
       "command": {
@@ -26,13 +23,11 @@
         "split": "auto",
         "splitMode": "duplicate"
       },
-      "id": "User.splitPane.A6751878",
-      "keys": "alt+shift+d"
+      "id": "User.splitPane.A6751878"
     },
     {
-      "command": "toggleFocusMode",
-      "id": "User.toggleFocusMode",
-      "keys": "ctrl+shift+o"
+      "command": "find",
+      "id": "User.find"
     }
   ],
   "alwaysOnTop": false,
@@ -42,6 +37,28 @@
   "defaultProfile": "{2c4de342-38b7-51cf-b940-2309a097f518}",
   "initialCols": 145,
   "initialRows": 40,
+  "keybindings": [
+    {
+      "id": "User.toggleFocusMode",
+      "keys": "ctrl+shift+o"
+    },
+    {
+      "id": "User.copy.644BA8F2",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": "User.find",
+      "keys": "ctrl+shift+f"
+    },
+    {
+      "id": "User.paste",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "User.splitPane.A6751878",
+      "keys": "alt+shift+d"
+    }
+  ],
   "newTabMenu": [
     {
       "type": "remainingProfiles"
@@ -49,38 +66,55 @@
   ],
   "profiles": {
     "defaults": {
+      "adjustIndistinguishableColors": "never",
       "antialiasingMode": "cleartype",
       "colorScheme": "Macaroni Custom",
       "cursorShape": "filledBox",
+      "experimental.retroTerminalEffect": false,
       "font": {
-        "face": "JetBrainsMono Nerd Font",
-        "size": 9
+        "builtinGlyphs": true,
+        "face": "JetBrainsMono Nerd Font Propo",
+        "size": 9,
+        "weight": "normal"
       },
       "icon": "none",
+      "intenseTextStyle": "none",
+      "opacity": 100,
       "padding": "16",
       "scrollbarState": "hidden",
-      "suppressApplicationTitle": true
+      "suppressApplicationTitle": true,
+      "useAcrylic": false
     },
     "list": [
       {
         "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
         "hidden": false,
-        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Powershell Icon.png",
+        "icon": "C:\\Users\\Pichau\\Pictures\\Terminal\\Powershell Icon.png",
         "name": "Powershell"
       },
       {
         "commandline": "%SystemRoot%\\System32\\cmd.exe",
         "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
         "hidden": false,
-        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Terminal Icon.png",
+        "icon": "C:\\Users\\Pichau\\Pictures\\Terminal\\Terminal Icon.png",
         "name": "Terminal"
       },
       {
+        "adjustIndistinguishableColors": "never",
+        "font": {
+          "builtinGlyphs": true,
+          "cellHeight": "1.4",
+          "face": "JetBrainsMono Nerd Font",
+          "size": 9,
+          "weight": "normal"
+        },
         "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
         "hidden": true,
-        "icon": "C:\\Users\\biewo\\OneDrive\\Imagens\\Terminal\\Ubuntu Icon.png",
+        "icon": "C:\\Users\\Pichau\\Pictures\\Terminal\\Ubuntu Icon.png",
+        "intenseTextStyle": "all",
         "name": "Linux",
+        "padding": "16",
         "source": "Windows.Terminal.Wsl"
       }
     ]
@@ -90,47 +124,51 @@
   "schemes": [
     {
       "background": "#161616",
-      "black": "#242424",
-      "blue": "#A978F6",
-      "brightBlack": "#323232",
-      "brightBlue": "#ADDEF8",
-      "brightCyan": "#8AFFFF",
+      "black": "#222222",
+      "blue": "#89dceb",
+      "brightBlack": "#555555",
+      "brightBlue": "#89dceb",
+      "brightCyan": "#89dceb",
       "brightGreen": "#A0E6AF",
-      "brightPurple": "#FE78FF",
-      "brightRed": "#FF9898",
+      "brightPurple": "#cba6f7",
+      "brightRed": "#f38ba8",
       "brightWhite": "#FFFFFF",
-      "brightYellow": "#FEFF57",
+      "brightYellow": "#fab387",
       "cursorColor": "#FFFFFF",
-      "cyan": "#8AFEFF",
+      "cyan": "#74c7ec",
       "foreground": "#F8F8F6",
-      "green": "#A0E6AF",
+      "green": "#a6e3a1",
       "name": "Macaroni Custom",
-      "purple": "#FD56F9",
-      "red": "#FF8989",
+      "purple": "#6B50FF",
+      "red": "#f38ba8",
       "selectionBackground": "#FFFFFF",
-      "white": "#FEFEFE",
-      "yellow": "#F0C674"
+      "white": "#e2e2e2",
+      "yellow": "#f9e2af"
     }
   ],
   "showTabsInTitlebar": true,
   "showTerminalTitleInTitlebar": false,
-  "tabWidthMode": "equal",
+  "tabWidthMode": "compact",
   "theme": "Macaroni Custom",
   "themes": [
     {
       "name": "Macaroni Custom",
-      "window": {
-        "applicationTheme": "dark",
-        "experimental.rainbowFrame": false
+      "tab": {
+        "background": "#161616FF",
+        "iconStyle": "default",
+        "showCloseButton": "always",
+        "unfocusedBackground": "#161616FF"
       },
       "tabRow": {
-        "background": "#161616",
-        "unfocusedBackground": "#161616"
+        "background": "#161616FF",
+        "unfocusedBackground": "#161616FF"
       },
-      "tab": {
-        "iconStyle": "default",
-        "background": "#161616",
-        "unfocusedBackground": "#161616"
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": null,
+        "unfocusedFrame": null,
+        "useMica": false
       }
     }
   ],
