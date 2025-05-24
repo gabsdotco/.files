@@ -17,10 +17,11 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 [window]
 decorations = "None"
 startup_mode = "Windowed"
+opacity = 0.95
 
 [window.dimensions]
-columns = 145
-lines = 40
+columns = 165
+lines = 45
 
 [window.padding]
 x = 16
