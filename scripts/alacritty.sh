@@ -3,17 +3,36 @@
 echo "
 ##########################
 # Alacritty Installation #
-##########################
-"
+##########################"
 
 # Installing Alacritty
-echo "Installing Alacritty"
-sudo apt update
-sudo apt upgrade
-sudo add-apt-repository ppa:aslatter/ppa -y
-sudo apt install alacritty
+echo ""
+echo "> Installing Alacritty"
+echo ""
 
-# Copy alacrity to $HOME
-echo "Copying alacrity to $HOME/.config"
+if ! command -v alacritty &> /dev/null; then
+    echo "[!] Alacritty is not installed. Installing Alacritty..."
+    echo ""
 
-cp -r ./config/alacritty $HOME/.config/alacritty
+    echo "> Updating and upgrading system packages..."
+    echo ""
+
+    sudo apt update
+    sudo apt upgrade
+
+    echo "> Adding Alacritty PPA..."
+    echo ""
+
+    sudo add-apt-repository ppa:aslatter/ppa -y
+
+    echo "> Installing Alacritty..."
+    echo ""
+
+    sudo apt install alacritty
+
+    echo "> Creating symlink for Alacritty config"
+
+    ln -s "$(pwd)/home/.config/alacritty" $HOME/.config
+else
+    echo "[!] Alacritty is already installed."
+fi
