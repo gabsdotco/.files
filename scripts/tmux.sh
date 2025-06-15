@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "
 #####################
 # TMUX Installation #

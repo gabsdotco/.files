@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo "
 ####################
 # NVM Installation #
