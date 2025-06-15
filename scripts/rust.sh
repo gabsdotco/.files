@@ -3,12 +3,8 @@
 echo "
 #####################
 # Rust Installation #
-#####################"
-
-# Installing Rust
-echo ""
-echo "> Installing Rust"
-echo ""
+#####################
+"
 
 if [ -e "~/.cargo/bin/rustc" ]; then
     echo "[!] Rust is not installed. Installing now..."

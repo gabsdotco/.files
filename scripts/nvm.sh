@@ -3,12 +3,8 @@
 echo "
 ####################
 # NVM Installation #
-####################"
-
-# Installing NVM
-echo ""
-echo "> Installing NVM"
-echo ""
+####################
+"
 
 if [ -e "~/.nvm/nvm.sh" ]; then
     echo "[!] NVM is not installed. Installing now..."

@@ -3,12 +3,8 @@
 echo "
 ####################
 # ZSH Installation #
-####################"
-
-# Installing ZSH
-echo ""
-echo "> Installing ZSH"
-echo ""
+####################
+"
 
 if ! command -v zsh &> /dev/null; then
     echo "[!] ZSH is not installed. Installing ZSH..."

@@ -3,12 +3,8 @@
 echo "
 ##########################
 # Alacritty Installation #
-##########################"
-
-# Installing Alacritty
-echo ""
-echo "> Installing Alacritty"
-echo ""
+##########################
+"
 
 if ! command -v alacritty &> /dev/null; then
     echo "[!] Alacritty is not installed. Installing Alacritty..."

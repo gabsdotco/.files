@@ -3,11 +3,8 @@
 echo "
 #######################
 # Fonts Installations #
-#######################"
-
-echo ""
-echo "> Installing JetBrains Mono Nerd Font"
-echo ""
+#######################
+"
 
 if ! grep -q "JetBrains Mono" ~/.local/share/fonts/*; then
     echo "[!] JetBrains Mono Nerd Font is not installed. Installing now..."

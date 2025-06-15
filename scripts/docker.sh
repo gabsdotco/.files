@@ -3,12 +3,8 @@
 echo "
 #######################
 # Docker Installation #
-#######################"
-
-# Installing Docker
-echo ""
-echo "> Installing Docker"
-echo ""
+#######################
+"
 
 if ! command -v docker &> /dev/null; then
     echo "[!] Docker is not installed. Installing Docker..."

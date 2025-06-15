@@ -3,12 +3,8 @@
 echo "
 #######################
 # Neovim Installation #
-#######################"
-
-# Installing Lua
-echo ""
-echo "> Installing Lua"
-echo ""
+#######################
+"
 
 if ! command -v lua &> /dev/null; then
     echo "[!] Lua is not installed. Installing now..."

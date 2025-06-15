@@ -3,12 +3,8 @@
 echo "
 #####################
 # TMUX Installation #
-#####################"
-
-# Installing Tmux
-echo ""
-echo "> Installing Tmux"
-echo ""
+#####################
+"
 
 if ! command -v tmux &> /dev/null; then
     echo "[!] Tmux is not installed. Installing Tmux..."
