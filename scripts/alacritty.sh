@@ -28,7 +28,7 @@ if ! command -v alacritty &> /dev/null; then
 
     echo "> Creating symlink for Alacritty config"
 
-    ln -s "$(pwd)/home/.config/alacritty" $HOME/.config
+    ln -ds "$(pwd)/config/alacritty" $HOME/.config/alacritty
 else
     echo "[!] Alacritty is already installed."
 fi
