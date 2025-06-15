@@ -13,7 +13,7 @@ echo ""
 if ! command -v zsh &> /dev/null; then
     echo "[!] ZSH is not installed. Installing ZSH..."
 
-    echo "> Installing ZSH"
+    echo "> Installing ZSH via apt"
     echo ""
 
     sudo apt install zsh
@@ -54,7 +54,6 @@ if ! command -v zsh &> /dev/null; then
 
     git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
 
-    # Create symlimk for .zshrc
     echo "> Creating symlink for .zshrc"
     echo ""
 

@@ -11,7 +11,7 @@ echo "> Installing Tmux"
 echo ""
 
 if ! command -v tmux &> /dev/null; then
-    echo "> Tmux is not installed. Installing Tmux..."
+    echo "[!] Tmux is not installed. Installing Tmux..."
     echo ""
 
     sudo apt update
@@ -21,7 +21,6 @@ if ! command -v tmux &> /dev/null; then
 
     tmux -V
 
-    # Create symlimk for .zshrc
     echo "> Creating symlink for .tmux.conf"
 
     ln -s "$(pwd)/home/.tmux.conf" $HOME/.tmux.conf
