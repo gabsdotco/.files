@@ -3,15 +3,24 @@
 echo "
 ####################
 # NVM Installation #
-####################
-"
+####################"
 
 # Installing NVM
-echo "Installing NVM"
+echo ""
+echo "> Installing NVM"
+echo ""
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+if [ -e "~/.nvm/nvm.sh" ]; then
+    echo "[!] NVM is not installed. Installing now..."
+    echo ""
 
-nvm install --lts
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 
-node -v
-npm -v
+    nvm install --lts
+    nvm alias default lts
+
+    node -v
+    npm -v
+else
+    echo "[!] NVM is already installed."
+fi
