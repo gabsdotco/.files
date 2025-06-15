@@ -3,37 +3,65 @@
 echo "
 ####################
 # ZSH Installation #
-####################
-"
+####################"
 
 # Installing ZSH
-echo "Installing ZSH"
-sudo apt install zsh
+echo ""
+echo "> Installing ZSH"
+echo ""
 
-# Installing Oh My ZSH
-echo "Installing Oh My ZSH"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if ! command -v zsh &> /dev/null; then
+    echo "[!] ZSH is not installed. Installing ZSH..."
 
-# Installing ZSH Plugins
-echo "Installing ZSH Autosuggestions"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+    echo "> Installing ZSH"
+    echo ""
 
-echo "Installing ZSH Syntax Highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+    sudo apt install zsh
 
-echo "Installing ZSH Z"
-git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+    # Installing Oh My ZSH
+    
+    echo "> Installing Oh My ZSH"
+    echo ""
 
-echo "Installing ZSH FZF"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-echo "Installing ZSH Typewritten Theme"
-git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
+    # Installing ZSH Plugins
+    
+    echo "> Installing ZSH Autosuggestions"
+    echo ""
 
-# Copy .zshrc to $HOME
-echo "Copying .zshrc to $HOME"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
-cp ./home/.zshrc $HOME
+    echo "> Installing ZSH Syntax Highlighting"
+    echo ""
+    
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-source ~/.zshrc
+    echo "> Installing ZSH Z"
+    echo ""
+
+    git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-z
+
+    echo "> Installing ZSH FZF"
+    echo ""
+
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+    ~/.fzf/install
+
+    echo "> Installing ZSH Typewritten Theme"
+    echo ""
+
+    git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
+
+    # Create symlimk for .zshrc
+    echo "> Creating symlink for .zshrc"
+    echo ""
+
+    ln -s "$(pwd)/home/.zshrc" $HOME/.zshrc
+
+    echo "> Sourcing '.zshrc'"
+    source $HOME/.zshrc
+else
+    echo "[!] ZSH is already installed."
+fi
