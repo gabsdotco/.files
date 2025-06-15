@@ -1,9 +1,10 @@
 #!/bin/bash
-source ./scripts/alacritty.sh
-source ./scripts/docker.sh
-source ./scripts/fonts.sh
-source ./scripts/nvm.sh
-source ./scripts/rust.sh
-source ./scripts/neovim.sh
-source ./scripts/tmux.sh
-source ./scripts/zsh.sh
+./scripts/alacritty.sh
+./scripts/docker.sh
+./scripts/fonts.sh
+./scripts/gvm.sh
+./scripts/nvm.sh
+./scripts/rust.sh
+./scripts/neovim.sh
+./scripts/tmux.sh
+./scripts/zsh.sh
