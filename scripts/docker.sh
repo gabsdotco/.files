@@ -3,21 +3,22 @@
 echo "
 #######################
 # Docker Installation #
-#######################
-"
+#######################"
 
 # Installing Docker
-echo "Installing Docker"
+echo ""
+echo "> Installing Docker"
+echo ""
 
-sudo apt install docker.io
-sudo usermod -aG docker $USER
+if ! command -v docker &> /dev/null; then
+    echo "[!] Docker is not installed. Installing Docker..."
+    echo ""
 
-docker --version
+    sudo apt install docker.io
+    sudo usermod -aG docker $USER
 
-# Installing Docker Compose
-echo "Installing Docker Compose"
-
-sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-
-docker-compose --version
+    docker --version
+    docker-compose --version
+else
+    echo "[!] Docker is already installed."
+fi
