@@ -3,20 +3,28 @@
 echo "
 #####################
 # TMUX Installation #
-#####################
-"
+#####################"
 
 # Installing Tmux
-echo "Installing Tmux"
+echo ""
+echo "> Installing Tmux"
+echo ""
 
-sudo apt update
-sudo apt install tmux
+if ! command -v tmux &> /dev/null; then
+    echo "> Tmux is not installed. Installing Tmux..."
+    echo ""
 
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    sudo apt update
+    sudo apt install tmux
 
-tmux -V
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
-# Copy .tmux.conf to $HOME
-echo "Copying .tmux.conf to $HOME"
+    tmux -V
 
-cp ./home/.tmux.conf $HOME
+    # Create symlimk for .zshrc
+    echo "> Creating symlink for .tmux.conf"
+
+    ln -s "$(pwd)/home/.tmux.conf" $HOME/.tmux.conf
+else
+    echo "[!] Tmux is already installed."
+fi
