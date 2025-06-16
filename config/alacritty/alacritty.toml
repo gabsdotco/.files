@@ -1,1 +1,2 @@
-import = ["/home/gabs/.config/alacritty/colors.toml", "/home/gabs/.config/alacritty/fonts.toml", "/home/gabs/.config/alacritty/config.toml"]
+[general]
+import = ["/home/olive/.config/alacritty/colors.toml", "/home/olive/.config/alacritty/fonts.toml", "/home/olive/.config/alacritty/config.toml"]
