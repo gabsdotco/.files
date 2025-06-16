@@ -6,7 +6,7 @@ echo "
 #####################
 "
 
-if [ -e "~/.cargo/bin/rustc" ]; then
+if [ ! -d "$HOME/.cargo" ]; then
     echo "[!] Rust is not installed. Installing now..."
     echo ""
 

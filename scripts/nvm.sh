@@ -6,7 +6,7 @@ echo "
 ####################
 "
 
-if [ -e "~/.nvm/nvm.sh" ]; then
+if [ ! -f "$HOME/.nvm/nvm.sh" ]; then
     echo "[!] NVM is not installed. Installing now..."
     echo ""
 

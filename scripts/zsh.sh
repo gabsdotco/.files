@@ -48,7 +48,7 @@ if ! command -v zsh &> /dev/null; then
     echo "> Installing ZSH Typewritten Theme"
     echo ""
 
-    git clone https://github.com/reobin/typewritten.git $ZSH_CUSTOM/themes/typewritten
+    npm install -g typewritten
 
     echo "> Creating symlink for .zshrc"
     echo ""
