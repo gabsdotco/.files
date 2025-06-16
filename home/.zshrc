@@ -4,7 +4,11 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_THEME="typewritten/typewritten"
+export ZSH_THEME=""
+
+fpath+=$HOME/.zsh/typewritten
+autoload -U promptinit; promptinit
+prompt typewritten
 
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 export TYPEWRITTEN_SYMBOL="λ"
