@@ -3,7 +3,7 @@
 # ----------------- #
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/gabs/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="typewritten/typewritten"
 
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
@@ -55,26 +55,28 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-fpath=($fpath "/home/gabs/.zfunctions")
+fpath=($fpath "$HOME/.zfunctions")
 
 # pnpm
-export PNPM_HOME="/home/gabs/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
-
-# asdf
-. "$HOME/.asdf/asdf.sh"
-
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
 # add cargo to PATH
-export PATH="/home/gabs/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # add bob to PATH
-export PATH="/home/gabs/.local/share/bob/nvim-bin:$PATH"
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 
 # Turso
-export PATH="/home/gabs/.turso:$PATH"
+export PATH="$HOME/.turso:$PATH"
+fpath=($fpath "$HOME/.zfunctions")
+
+# Set typewritten ZSH as a prompt
+autoload -U promptinit; promptinit
+prompt typewritten
+
+# Set GVM variables
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
