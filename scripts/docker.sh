@@ -10,11 +10,17 @@ if ! command -v docker &> /dev/null; then
     echo "[!] Docker is not installed. Installing Docker..."
     echo ""
 
-    sudo apt install docker.io
-    sudo usermod -aG docker $USER
+    echo "> Installing Docker..."
+    echo ""
 
-    docker --version
-    docker-compose --version
+    curl -fsSL https://get.docker.com -o /tmp/get-docker.sh
+    sudo sh /tmp/get-docker.sh
+
+    echo "> Installing Docker Compose..."
+    echo ""
+
+    sudo apt-get update
+    sudo apt-get install docker-compose-plugin
 else
     echo "[!] Docker is already installed."
 fi
