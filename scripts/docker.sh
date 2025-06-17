@@ -21,6 +21,15 @@ if ! command -v docker &> /dev/null; then
 
     sudo apt-get update
     sudo apt-get install docker-compose-plugin
+
+    echo "> Adding user to the Docker group..."
+    echo ""
+
+    sudo groupadd docker
+    sudo usermod -aG docker $USER
+
+    sudo systemctl enable docker.service
+    sudo systemctl enable containerd.service
 else
     echo "[!] Docker is already installed."
 fi
