@@ -12,7 +12,7 @@ prompt typewritten
 
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 export TYPEWRITTEN_SYMBOL="λ"
-export TYPEWRITTEN_COLOR_MAPPINGS="primary:white;secondary:white"
+export TYPEWRITTEN_COLOR_MAPPINGS="primary:foreground;secondary:dim_foreground"
 export TYPEWRITTEN_CURSOR="block"
 
 plugins=(
