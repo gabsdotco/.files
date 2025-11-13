@@ -92,9 +92,12 @@ if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/
 if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
-# bun completions
+# Bun Completions
 [ -s "/Users/gabs/.bun/_bun" ] && source "/Users/gabs/.bun/_bun"
 
-# bun
+# Bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Custom tools
+export PATH="$HOME/bin:$PATH"
