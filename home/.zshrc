@@ -12,7 +12,7 @@ prompt typewritten
 
 export TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 export TYPEWRITTEN_SYMBOL="λ"
-export TYPEWRITTEN_COLOR_MAPPINGS="primary:white;secondary:white"
+export TYPEWRITTEN_COLOR_MAPPINGS="primary:foreground;secondary:dim_foreground"
 export TYPEWRITTEN_CURSOR="block"
 
 plugins=(
@@ -84,3 +84,20 @@ prompt typewritten
 
 # Set GVM variables
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '$HOME/google-cloud-sdk/path.zsh.inc' ]; then . '$HOME/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '$HOME/google-cloud-sdk/completion.zsh.inc' ]; then . '$HOME/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
+# Bun Completions
+[ -s "/Users/gabs/.bun/_bun" ] && source "/Users/gabs/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Custom tools
+export PATH="$HOME/bin:$PATH"
