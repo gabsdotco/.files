@@ -29,7 +29,7 @@ white = "#6B7280"
 yellow = "#f8e8d0"
 
 [colors.primary]
-background = "#F5F5F0"
+background = "#f2ebe2"
 foreground = "#161616"
 
 dim_foreground = "#4a4a4a"
@@ -37,4 +37,4 @@ bright_foreground = "#000000"
 
 [colors.cursor]
 cursor = "#000000"
-text = "#ffffff"
+text = "#f2ebe2"
