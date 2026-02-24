@@ -1,20 +1,20 @@
 [font]
-size = 13.5
+size = 14
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "Lilex Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "Lilex Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "Lilex Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "Lilex Nerd Font"
 style = "Regular"
 
 [font.offset]
