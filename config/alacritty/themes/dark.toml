@@ -36,5 +36,5 @@ dim_foreground = "#4a4a4a"
 bright_foreground = "#ffffff"
 
 [colors.cursor]
-cursor = "#ffffff"
+cursor = "#f8f8f6"
 text = "#000000"
