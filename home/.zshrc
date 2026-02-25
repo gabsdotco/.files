@@ -104,3 +104,8 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# bun completions
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
+
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

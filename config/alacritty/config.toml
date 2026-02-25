@@ -13,13 +13,13 @@ save_to_clipboard = true
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 
 [window]
-decorations = "buttonless"
+decorations = "None"
 startup_mode = "Windowed"
 opacity = 1
 
 [window.dimensions]
-columns = 170
-lines = 49
+columns = 165
+lines = 45
 
 [window.padding]
 x = 16
