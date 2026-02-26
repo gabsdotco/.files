@@ -9,4 +9,5 @@ this is my small dotfiles :)
 ![preview](https://raw.githubusercontent.com/gabsdotco/.files/refs/heads/main/.github/docs/preview_dark.png)
 
 **Light Mode**
+
 ![preview](https://raw.githubusercontent.com/gabsdotco/.files/refs/heads/main/.github/docs/preview_light.png)
