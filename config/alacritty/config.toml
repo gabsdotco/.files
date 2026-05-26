@@ -16,6 +16,8 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
 decorations = "None"
 startup_mode = "Windowed"
 opacity = 1
+resize_increments = true
+dynamic_padding = true
 
 [window.dimensions]
 columns = 165
