@@ -7,4 +7,5 @@
 ./scripts/rust.sh
 ./scripts/neovim.sh
 ./scripts/tmux.sh
+./scripts/tailscale.sh
 ./scripts/zsh.sh

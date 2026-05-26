@@ -1,2 +1,2 @@
 [general]
-import = ["~/.config/alacritty/themes/light.toml","~/.config/alacritty/fonts.toml","~/.config/alacritty/config.toml"]
+import = ["~/.config/alacritty/themes/dark.toml","~/.config/alacritty/fonts.toml","~/.config/alacritty/config.toml"]
