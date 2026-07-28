@@ -104,3 +104,6 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 
 # opencode
 export PATH="$HOME/.opencode/bin:$PATH"
+
+# Local Binaries
+export PATH="$HOME/.local/bin:$PATH"
