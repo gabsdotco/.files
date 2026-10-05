@@ -1,25 +1,48 @@
 #!/bin/bash
 
+set -e
+
 echo "
-#######################
-# Fonts Installations #
-#######################
+#####################
+# Font Installation #
+#####################
 "
 
-if ! grep -q "JetBrains Mono" ~/.local/share/fonts/*; then
-    echo "[!] JetBrains Mono Nerd Font is not installed. Installing now..."
-    echo ""
+#
+# Homebrew
+#
 
-    mkdir -p ~/.local/share/fonts
-
-    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip
-
-    unzip JetBrainsMono.zip -d ~/.local/share/fonts
-
-    rm JetBrainsMono.zip
-
-    fc-cache -fv
-else
-    echo "[!] JetBrains Mono Nerd Font is already installed."
+if ! command -v brew &> /dev/null; then
+    echo "[!] Homebrew is not installed."
+    echo "> Please install Homebrew first."
+    exit 1
 fi
 
+#
+# Fonts
+#
+
+FONTS=(
+    "font-jetbrains-mono-nerd-font"
+)
+
+echo "> Installing fonts..."
+echo ""
+
+for font in "${FONTS[@]}"; do
+    if brew list --cask "$font" &> /dev/null; then
+        echo "[✓] $font is already installed."
+    else
+        echo "[!] $font is not installed."
+        echo "> Installing $font..."
+
+        brew install --cask "$font"
+
+        echo "[✓] $font installed."
+    fi
+done
+
+echo ""
+echo "#####################"
+echo "# Installation Done #"
+echo "#####################"
